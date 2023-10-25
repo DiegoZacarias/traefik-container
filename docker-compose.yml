@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  # Configuración de Traefik
+  traefik:
+    container_name: traefik
+    image: traefik:v2.9
+    command:
+      - --api.insecure=true
+      - --providers.docker
+    networks:
+      - traefik-net
+    ports:
+      - "80:80"
+      - "${TRAEFIK_PORT}:8080" # Interfaz de administración de Traefik
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  traefik-net:
+    external: true
+
