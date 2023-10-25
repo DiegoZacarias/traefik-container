@@ -7,7 +7,7 @@ Este repositorio contiene un contenedor configurado con Traefik, que te permite 
 Clona este repositorio en tu servidor:
 
 ```bash
-git clone https://github.com/tuusuario/turepositorio.git
+git clone https://github.com/DiegoZacarias/traefik-container.git
 ```
 
 ## 2. Copia el Archivo `.env.example`
