@@ -11,7 +11,7 @@ services:
     networks:
       - traefik-net
     ports:
-      - "80:80"
+      - "${TRAEFIK_PORT}:80"
       - "${TRAEFIK_DASHBOARD_PORT}:8080" # Interfaz de administración de Traefik
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
