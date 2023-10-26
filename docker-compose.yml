@@ -15,6 +15,10 @@ services:
       - "${TRAEFIK_PORT}:8080" # Interfaz de administración de Traefik
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dashboard.rule=Host(`${TRAEFIK_HOST}`)"
+      - "traefik.http.services.dashboard.loadbalancer.server.port=8080"
 
 networks:
   traefik-net:

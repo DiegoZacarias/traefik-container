@@ -18,10 +18,11 @@ Copia el archivo `.env.example` y configura el puerto que deseas utilizar. Por e
 cp .env.example .env
 ```
 
-Luego, edita el archivo `.env` y establece el valor del puerto:
+Luego, edita el archivo `.env` y establece el valor del puerto y el host:
 
 ```plaintext
 TRAEFIK_PORT=8080
+TRAEFIK_HOST=traefik.localhost
 ```
 
 ## 3. Da Permisos al Archivo `initialize_traefik.sh`
