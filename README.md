@@ -26,6 +26,12 @@ TRAEFIK_DASHBOARD_PORT=8080
 TRAEFIK_HOST=traefik.localhost
 ```
 
+Importante: si utilizas otro puerto distinto al 80 en TRAEFIK_PORT, ten en cuenta que deberas especificar ese puerto en la url en el navegador. Ejemplo:
+
+Si declaras TRAEFIK_PORT=81,
+Para acceder al host de traefik deberas usar la siguiente url:
+traefik.localhost:81
+
 ## 3. Da Permisos al Archivo `initialize_traefik.sh`
 
 Asegúrate de que el archivo `initialize_traefik.sh` tenga permisos de ejecución. Puedes hacerlo con el siguiente comando:
