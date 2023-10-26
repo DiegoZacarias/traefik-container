@@ -15,11 +15,11 @@ if [ "$confirmation" == "y" ]; then
     fi
 
     # Verificamos si el servicio Traefik está activo
-    if docker-compose ps | grep -q "traefik"; then
+    if docker compose ps | grep -q "traefik"; then
         echo "Traefik ya está en ejecución."
     else
         # Luego, ejecutamos docker-compose up -d para iniciar Traefik
-        docker-compose up -d
+        docker compose up -d
         echo "Traefik ha sido iniciado."
     fi
 else
